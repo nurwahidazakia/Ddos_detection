@@ -1,0 +1,46 @@
+{
+    "_comment": "Pemetaan label CIC-DDoS2019 ke kelas biner. 0 = Normal, 1 = Attack.",
+    "_source": "Label dari dokumentasi resmi UNB CIC-DDoS2019 dataset.",
+    "_rules": [
+        "Label yang tidak ada di pemetaan ini akan DITOLAK dan dilaporkan.",
+        "Jangan menambahkan label tanpa verifikasi terhadap dokumentasi sumber.",
+        "Label CIC-IDS2017 yang BUKAN DDoS tidak boleh dimasukkan."
+    ],
+
+    "normal": {
+        "BENIGN": 0
+    },
+
+    "attack_cicddos2019_training_day": {
+        "DrDoS_DNS": 1,
+        "DrDoS_LDAP": 1,
+        "DrDoS_MSSQL": 1,
+        "DrDoS_NetBIOS": 1,
+        "DrDoS_NTP": 1,
+        "DrDoS_SNMP": 1,
+        "DrDoS_SSDP": 1,
+        "DrDoS_UDP": 1,
+        "Syn": 1,
+        "TFTP": 1,
+        "UDP-lag": 1,
+        "UDPLag": 1,
+        "WebDDoS": 1
+    },
+
+    "attack_cicddos2019_testing_day": {
+        "LDAP": 1,
+        "MSSQL": 1,
+        "NetBIOS": 1,
+        "Portmap": 1,
+        "Syn": 1,
+        "UDP": 1,
+        "UDPLag": 1,
+        "UDP-lag": 1
+    },
+
+    "attack_cicids2017_ddos_only": {
+        "_comment": "Hanya subset DDoS dari CIC-IDS2017. Label lain (Brute Force, Infiltration, Bot, dll.) BUKAN DDoS.",
+        "DDoS": 1
+    }
+}
+
